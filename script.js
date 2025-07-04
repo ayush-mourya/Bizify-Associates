@@ -166,8 +166,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             // or is the base path (e.g., "/")
             const currentPath = window.location.pathname;
             const isHomePage = currentPath.endsWith('/') || currentPath.endsWith('/index.html') ||
-                               currentPath.endsWith('/Bizify%20Associates/') || // For repo root
-                               currentPath.endsWith('/Bizify%20Associates/index.html'); // For index.html within repo root
+                               currentPath.endsWith('/Bizify-Associates/') || // CORRECTED: Changed Bizify%20Associates to Bizify-Associates
+                               currentPath.endsWith('/Bizify-Associates/index.html'); // CORRECTED: Changed Bizify%20Associates to Bizify-Associates
 
 
             if (isHomePage) {
@@ -206,7 +206,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         aboutButton.addEventListener('click', (event) => {
             event.preventDefault();
             // Check if current path indicates being on a service sub-page
-            // Adjusted to check if pathname contains the "Services/" segment relative to base
             if (window.location.pathname.includes('Services/')) {
                  // Navigate to index.html from a service page, relative to the base URL
                  window.location.href = 'index.html#first-section';
@@ -255,8 +254,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     const currentPath = window.location.pathname;
                     const isHomePage = currentPath.endsWith('/') || currentPath.endsWith('/index.html') ||
-                                       currentPath.endsWith('/Bizify%20Associates/') ||
-                                       currentPath.endsWith('/Bizify%20Associates/index.html');
+                                       currentPath.endsWith('/Bizify-Associates/') || // CORRECTED: Changed Bizify%20Associates to Bizify-Associates
+                                       currentPath.endsWith('/Bizify-Associates/index.html'); // CORRECTED: Changed Bizify%20Associates to Bizify-Associates
 
                     if (isHomePage) {
                         const targetSection = document.getElementById(scrollToId);
