@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bizify Associates - Contact Us</title>
+    <base href="/Bizify-Associates/">
+    <!-- Link to your main site's CSS for header/footer consistency -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to new CSS for contact and service pages -->
+    <link rel="stylesheet" href="./contact_page_style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="top-bar"></div>
+
+    <header id="top-header">
+      <div id="logo-name">
+        <img
+          id="logo-image"
+          src="Bizify%20Associates/assets/logo.png"
+          alt="logo"
+        />
+        <span id="company-name">Bizify<br />Associates</span>
+      </div>
+      <nav id="top-nav-bar">
+        <ul id="top-nav-bar-ul">
+          <li>
+            <a class="top-nav-bar-item" href="index.html#compliance-section"
+              >Compliance</a
+            >
+          </li>
+          <li>
+            <a
+              class="top-nav-bar-item"
+              href="index.html#register-company-section"
+              >Register</a
+            >
+          </li>
+          <li>
+            <a class="top-nav-bar-item" href="index.html#license-section"
+              >License</a
+            >
+          </li>
+          <li>
+            <a class="top-nav-bar-item" href="index.html#trademark-section"
+              >Trademark</a
+            >
+          </li>
+          <li>
+            <a class="top-nav-bar-item" href="index.html#accounts-section"
+              >Accounts</a
+            >
+          </li>
+          <li>
+            <a class="top-nav-bar-item" href="index.html#file-gst-section"
+              >File GST</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contact-page-container">
+      <div class="contact-info-section">
+        <h2>Contact Us</h2>
+        <p>
+          Not sure what you need? The team at Bizify Associates will be happy to
+          listen to you and suggest solutions you hadn't considered.
+        </p>
+        <div class="contact-detail">
+          <i class="fas fa-envelope"></i>
+          <span
+            >Email:
+            <a href="mailto:ayush22126@iiitd.ac.in"
+              >ayush22126@iiitd.ac.in</a
+            ></span
+          >
+        </div>
+        <div class="contact-detail">
+          <i class="fas fa-phone"></i>
+          <span>Phone: <a href="tel:+918851446033">+91 88514460333</a></span>
+        </div>
+        <!-- You can add social media icons here if desired -->
+        <!-- <div class="social-icons">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+        </div> -->
+      </div>
+      <div class="contact-form-section">
+        <div class="contact-form-box">
+          <h3>
+            Unsure where to start? We're here to listen and recommend the best
+            path forward for you.
+          </h3>
+          <form action="https://formspree.io/f/myzjvbpn" method="POST">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" required />
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number</label>
+              <input type="tel" id="phoneNumber" name="phoneNumber" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,284 @@
+:root {
+  --bizify-blue: #002b67;
+  --bizify-blue-hover: #0044aa;
+  --bizify-orange: #f5a208;
+  --text-dark: #001f4d;
+  --text-light: #ffffff;
+  --bg-light: #f9f9f9;
+  --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --border-radius: 1rem;
+  --transition-fast: 0.3s ease;
+  --gradient-button: linear-gradient(
+    to right,
+    var(--bizify-blue),
+    var(--bizify-orange)
+  );
+}
+
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif; /* Changed from monospace for better readability */
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  animation: fadeInBody 0.5s ease-in;
+}
+
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.service-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  animation: slideUp 0.6s ease-in;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header (specific to service pages content) */
+.service-info h1 {
+  font-size: 2.5rem; /* Slightly larger for prominence */
+  margin-bottom: 1rem;
+  color: var(--bizify-blue);
+  text-align: center; /* Center the title */
+}
+
+.service-info p {
+  font-size: 1.1rem;
+  line-height: 1.7; /* Increased line height for better readability */
+  color: #333;
+  text-align: justify; /* Justify text for a clean look */
+  margin-bottom: 2rem;
+}
+
+/* Layout */
+.content-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center; /* Center content boxes */
+}
+
+/* Documents Box */
+.documents-box {
+  flex: 1 1 41%; /* Adjusted flex basis for better responsiveness */
+  background-color: var(--bizify-blue);
+  color: var(--text-light);
+  padding: 2rem; /* Increased padding */
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  /* Removed hover transform as per instruction */
+}
+
+.documents-box h2 {
+  margin-top: 0;
+  color: var(--text-light);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.documents-box ul {
+  list-style: none; /* Changed from disc for custom styling */
+  padding-left: 0; /* Remove default padding */
+  margin: 0.5rem 0 0;
+}
+
+.documents-box ul li {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle separator */
+}
+
+.documents-box ul li:last-child {
+  border-bottom: none; /* No border for the last item */
+}
+
+/* Contact Form */
+.contact-form-box {
+  flex: 1 1 45%; /* Adjusted flex basis for better responsiveness */
+  background-color: var(--text-light);
+  padding: 2rem; /* Increased padding */
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  /* Removed hover transform as per instruction */
+}
+
+.contact-form-box h3 {
+  font-size: 1.2rem; /* Slightly larger heading */
+  margin-bottom: 1.5rem;
+  color: var(--bizify-blue);
+  text-align: center;
+}
+
+form input,
+form textarea {
+  width: calc(100% - 1.6rem); /* Adjust width for padding */
+  padding: 0.8rem;
+  margin: 0.6rem 0; /* Increased margin */
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--bizify-orange);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(245, 162, 8, 0.2);
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px; /* Slightly increased min-height */
+}
+
+/* Button */
+form button {
+  padding: 1rem 2.5rem; /* Larger button */
+  background-color: var(--bizify-blue);
+  color: var(--text-light);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem; /* Larger font for button */
+  margin-top: 1rem; /* Increased margin */
+  transition: background-color var(--transition-fast),
+    transform var(--transition-fast); /* Add transform for hover effect */
+  box-shadow: 0 4px 10px rgba(3, 39, 95, 0.2);
+  display: block; /* Make button full width if needed, or inline-block for centering */
+  margin-left: auto; /* Center button if display is block */
+  margin-right: auto; /* Center button if display is block */
+}
+
+form button:hover {
+  background-color: var(--bizify-orange);
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column; /* Stack boxes vertically on smaller screens */
+  }
+
+  .documents-box,
+  .contact-form-box {
+    flex: 1 1 100%; /* Full width on small screens */
+  }
+
+  .service-container {
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+
+  .service-info h1 {
+    font-size: 2rem;
+  }
+
+  .documents-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form-box h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Base style.css elements that might affect this page if not properly isolated */
+/* (Assuming top-bar, top-header, logo-name, etc. are handled in your main style.css) */
+/* If you want to include general header/footer styles in services_style.css, add them here. */
+
+#top-bar {
+  background-color: var(--bizify-blue); /* Example color */
+  height: 10px; /* Example height */
+  width: 100%;
+}
+
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--text-light);
+  box-shadow: var(--box-shadow);
+}
+
+#logo-name {
+  display: flex;
+  align-items: center;
+}
+
+#logo-image {
+  height: 50px; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+#company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--bizify-blue);
+  line-height: 1.2;
+}
+
+#top-nav-bar-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.top-nav-bar-item {
+  cursor: pointer;
+  color: var(--text-dark);
+  font-weight: bold;
+  transition: color var(--transition-fast);
+}
+
+.top-nav-bar-item:hover {
+  color: var(--bizify-orange);
+}
+
+#contact-button {
+  padding: 0.7rem 1.5rem;
+  background-color: var(--bizify-orange);
+  color: var(--text-light);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color var(--transition-fast);
+}
+
+#contact-button:hover {
+  background-color: var(--bizify-blue-hover);
+}
+
+/* Footer Placeholder (add your actual footer styles in style.css or services_style.css) */
+#footer-placeholder {
+  background-color: var(--bizify-blue); /* Example background */
+  height: 100px; /* Example height */
+  margin-top: 3rem;
+  width: 100%;
+}
