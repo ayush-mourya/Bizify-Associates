@@ -37,7 +37,7 @@ async function loadHTML(elementId, filePath) {
         document.getElementById(elementId).innerHTML = html;
         return true;
     } catch (error) {
-        console.error(`Error loading ${filePath}:`, error); // Corrected typo
+        consale.error(`Error loading ${filePath}:`, error);
         return false;
     }
 }
@@ -54,20 +54,16 @@ document.addEventListener("DOMContentLoaded", async () => { // Added 'async' for
 
     // --- Top Navigation Bar Items (using data-target) ---
     // Select the <li> elements with the data-target attribute
-    const navItems = document.querySelectorAll('#top-nav-bar-ul .top-nav-bar-item');
+    const navItems = document.querySelectorAll('#top-nav-bar-ul .top-nav-bar-item[data-target]');
 
     navItems.forEach(item => {
         item.addEventListener('click', (event) => {
-            // Check if the clicked item is an anchor tag
-            if (item.tagName === 'A' && item.getAttribute('href').includes('#')) {
-                // If it's an anchor with a hash, prevent default to handle it with smooth scroll
-                event.preventDefault();
-                const targetId = item.getAttribute('href').split('#')[1];
-                window.location.href = `/Bizify-Associates/index.html#${targetId}`;
-            } else {
-                // For other links, let the default behavior (navigation) occur
-                // or if it's a <li> wrapping an <a>, the <a>'s default will handle it
-            }
+            event.preventDefault(); // Prevent default if any (though <li> generally doesn't have one)
+
+            const targetId = item.getAttribute('data-target'); // Get the ID from data-target
+
+            // Always redirect to /index.html with the hash
+            window.location.href = `/index.html#${targetId}`;
         });
     });
 
@@ -79,8 +75,8 @@ document.addEventListener("DOMContentLoaded", async () => { // Added 'async' for
     if (contactButton) {
         contactButton.addEventListener('click', (event) => {
             event.preventDefault();
-            // Use absolute path for contact.html relative to the base href
-            window.location.href = 'contact.html';
+            // Use absolute path for contact.html
+            window.location.href = '/contact.html';
         });
     }
 
@@ -92,9 +88,9 @@ document.addEventListener("DOMContentLoaded", async () => { // Added 'async' for
             const firstSection = document.getElementById('first-section'); // Assuming 'first-section' is on index.html
             // If the about button is clicked from a service page, it should also go to index.html#first-section
             if (window.location.pathname.includes('/services/')) {
-                   window.location.href = '/Bizify-Associates/index.html#first-section';
+                 window.location.href = '/index.html#first-section';
             } else {
-                   smoothScrollTo(firstSection);
+                 smoothScrollTo(firstSection);
             }
         });
     }
@@ -102,9 +98,9 @@ document.addEventListener("DOMContentLoaded", async () => { // Added 'async' for
 
     // --- Dynamic Footer Loading ---
     // This part remains the same, using the loadHTML function.
-    const footerLoaded = await loadHTML('footer-placeholder', 'footer.html'); // Absolute path for footer relative to base href
+    const footerLoaded = await loadHTML('footer-placeholder', '/footer.html'); // Absolute path for footer
     if (footerLoaded) {
-        console.log("Footer loaded successfully!"); // Corrected typo
+        consale.log("Footer loaded successfully!");
 
         const footerLinks = document.querySelectorAll('.footer-column ul li a');
         footerLinks.forEach(link => {
@@ -117,8 +113,7 @@ document.addEventListener("DOMContentLoaded", async () => { // Added 'async' for
                         window.location.pathname === '/' ||
                         window.location.pathname.endsWith('index.html') ||
                         window.location.pathname === '' ||
-                        window.location.pathname.endsWith('/Bizify-Associates/') || // Added for base href
-                        window.location.pathname.endsWith('/Bizify-Associates/index.html'); // Added for base href
+                        window.location.pathname.endsWith('/');
 
                     if (isHomePage) {
                         const targetSection = document.getElementById(scrollToId);
@@ -126,8 +121,8 @@ document.addEventListener("DOMContentLoaded", async () => { // Added 'async' for
                             smoothScrollTo(targetSection);
                         }
                     } else {
-                        // Redirect to homepage with hash using absolute path relative to base href
-                        window.location.href = `index.html#${scrollToId}`;
+                        // Redirect to homepage with hash using absolute path
+                        window.location.href = `/index.html#${scrollToId}`;
                     }
                 }
             });
@@ -149,19 +144,18 @@ document.addEventListener("DOMContentLoaded", async () => { // Added 'async' for
                 if (serviceNameElement) {
                     const serviceName = serviceNameElement.textContent.trim();
                     const slug = serviceName.toLowerCase()
-                                        .replace(/\s+/g, '-')
-                                        .replace(/[^a-z0-9-]/g, '')
-                                        .replace(/--+/g, '-')
-                                        .replace(/^-+|-+$/g, '');
+                                            .replace(/\s+/g, '-')
+                                            .replace(/[^a-z0-9-]/g, '')
+                                            .replace(/--+/g, '-')
+                                            .replace(/^-+|-+$/g, '');
 
                     // Define the base path for your service detail pages (relative from root)
-                    // This path is now relative to the base href, so it will correctly resolve.
-                    const servicePageBasePath = 'services/'; 
+                    const servicePageBasePath = '/services/'; // Assuming a 'services' folder directly under root
 
                     const destinationURL = `${servicePageBasePath}${slug}.html`;
                     window.location.href = destinationURL;
                 } else {
-                    console.error("Service name paragraph not found in card:", card); // Corrected typo
+                    consale.error("Service name paragraph not found in card:", card);
                 }
             });
         });

@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GST Registration - Bizify Associates</title>
-    <link rel="stylesheet" href="../services_style.css" />
-    <link rel="stylesheet" href="/Bizify-Associates/style.css" /> 
+    <base href="/Bizify-Associates/">
+    <link rel="stylesheet" href="services_style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="top-bar"></div>
@@ -14,30 +15,30 @@
       <div id="logo-name">
         <img
           id="logo-image"
-          src="/Bizify-Associates/assets/logo.png" 
+          src="assets/logo.png"
           alt="Bizify Associates Logo"
         />
         <span id="company-name">Bizify<br />Associates</span>
       </div>
       <nav id="top-nav-bar">
         <ul id="top-nav-bar-ul">
-          <li class="top-nav-bar-item" data-target="compliance-section">
-            Compliance
+          <li>
+            <a class="top-nav-bar-item" href="index.html#compliance-section">Compliance</a>
           </li>
-          <li class="top-nav-bar-item" data-target="register-company-section">
-            Register
+          <li>
+            <a class="top-nav-bar-item" href="index.html#register-company-section">Register</a>
           </li>
-          <li class="top-nav-bar-item" data-target="license-section">
-            License
+          <li>
+            <a class="top-nav-bar-item" href="index.html#license-section">License</a>
           </li>
-          <li class="top-nav-bar-item" data-target="trademark-section">
-            Trademark
+          <li>
+            <a class="top-nav-bar-item" href="index.html#trademark-section">Trademark</a>
           </li>
-          <li class="top-nav-bar-item" data-target="accounts-section">
-            Accounts
+          <li>
+            <a class="top-nav-bar-item" href="index.html#accounts-section">Accounts</a>
           </li>
-          <li class="top-nav-bar-item" data-target="file-gst-section">
-            File GST
+          <li>
+            <a class="top-nav-bar-item" href="index.html#file-gst-section">File GST</a>
           </li>
         </ul>
         <button id="contact-button">Contact Us</button>
@@ -48,12 +49,12 @@
       <section class="service-info">
         <h1>GST Registration</h1>
         <p>
-          Goods and Services Tax (GST) registration is mandatory for businesses
-          exceeding a certain turnover threshold or engaged in specific types of
-          supply. Obtaining a Goods and Services Tax Identification Number (GSTIN)
-          allows businesses to collect GST, claim input tax credit, and ensures
-          legal compliance. Bizify Associates provides end-to-end assistance
-          with hassle-free GST registration, making your business GST-ready.
+          Goods and Services Tax (GST) is a unified indirect tax system in
+          India, replacing multiple indirect taxes. Businesses exceeding a
+          certain turnover threshold or engaged in specific activities are
+          mandated to register under GST. Bizify Associates simplifies the GST
+          registration process, ensuring you obtain your GSTIN seamlessly and
+          comply with all legal requirements.
         </p>
       </section>
 
@@ -61,19 +62,19 @@
         <div class="documents-box">
           <h2>Documents Required</h2>
           <ul>
-            <li>PAN of the Applicant (Company/Individual/LLP)</li>
-            <li>Aadhaar Card of the Proprietor/Partners/Directors</li>
-            <li>Proof of business registration (e.g., Certificate of Incorporation, Partnership Deed)</li>
-            <li>Address proof of the principal place of business (Electricity Bill, Rent Agreement, Property Tax Receipt)</li>
-            <li>Bank account details (Account number, IFSC code, Bank name)</li>
-            <li>Authorized Signatory details (PAN, Aadhaar, Proof of Appointment)</li>
-            <li>Digital Signature Certificate (DSC) for Company/LLP</li>
-            <li>Nature of business activities</li>
+            <li>PAN Card of the applicant entity (Proprietor/Company/LLP/Partnership Firm)</li>
+            <li>Aadhaar Card of Proprietor/Partners/Directors</li>
+            <li>Proof of business registration (Certificate of Incorporation, Partnership Deed, etc.)</li>
+            <li>Proof of address of business premises (Electricity Bill, Rent Agreement, Sale Deed)</li>
+            <li>Bank account details (Bank Statement, Cancelled Cheque)</li>
+            <li>Digital Signature Certificate (DSC) or Aadhaar OTP for E-sign</li>
+            <li>Authorization letter/Board Resolution for authorized signatory</li>
+            <li>Nature of business activity</li>
           </ul>
         </div>
 
         <div class="contact-form-box">
-          <h3>Need to register for GST? We've got you covered!</h3>
+          <h3>Need to register for GST? We make it easy!</h3>
           <form action="https://formspree.io/f/myzjvbpn" method="POST">
             <input type="text" name="name" placeholder="Your Name" required />
             <input
@@ -102,7 +103,7 @@
     <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="/Bizify-Associates/script.js"></script> 
-    <script src="../services_script.js"></script>
+    <script src="script.js"></script>
+    <script src="services_script.js"></script>
   </body>
 </html>
