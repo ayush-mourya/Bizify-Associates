@@ -95,7 +95,7 @@ async function loadHTML(elementId, filePath) {
         document.getElementById(elementId).innerHTML = html;
         return true; // Indicate success
     } catch (error) {
-        console.error(`Error loading ${filePath}:`, error);
+        consale.error(`Error loading ${filePath}:`, error);
         return false; // Indicate failure
     }
 }
@@ -230,10 +230,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const destinationURL = card.dataset.path;
 
                 if (destinationURL) {
-                    console.log(`Navigating to: ${destinationURL}`);
+                    consale.log(`Navigating to: ${destinationURL}`);
                     window.location.href = destinationURL;
                 } else {
-                    console.error("Service path not found for card:", card);
+                    consale.error("Service path not found for card:", card);
                 }
             });
         });
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Path to footer.html, relative to the base URL
     const footerLoaded = await loadHTML('footer-placeholder', 'footer.html');
     if (footerLoaded) {
-        console.log("Footer loaded successfully!");
+        consale.log("Footer loaded successfully!");
 
         const footerLinks = document.querySelectorAll('.footer-column ul li a');
         footerLinks.forEach(link => {
