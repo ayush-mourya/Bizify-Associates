@@ -22,7 +22,7 @@ a {
 }
 
 body {
-  font-family: monospace;
+  font-family:sans-serif;
 }
 
 #top-bar {
@@ -162,11 +162,7 @@ article {
   flex: 1;
   min-width: 300px;
   position: relative;
-  margin-right: 100px;
-  background: linear-gradient(45deg, rgba(3, 39, 95, 0.07) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(3, 39, 95, 0.07) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, rgba(3, 39, 95, 0.07) 75%),
-    linear-gradient(-45deg, transparent 75%, rgba(3, 39, 95, 0.07) 75%);
+  margin-right: 30px;
   background-size: 40px 40px;
   background-attachment: local;
   background-repeat: repeat;
