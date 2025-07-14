@@ -41,10 +41,10 @@ const serviceSectionsData = {
     ],
     "accounts-section": [
         { imageSrc: "assets/Accounts/tds return filing.png", altText: "TDS Return Filing", title: "TDS Return Filing", path: "Services/Accounts/tds-return-filing.html" },
-        { imageSrc: "assets/Accounts/Income Tax Notice.png", altText: "Income Tax Notice", title: "Income Tax Notice", path: "Services/Accounts/income-tax-notice.html" },
-        { imageSrc: "assets/Accounts/Annual Compliance.png", altText: "Annual Compliance", title: "Annual Compliance", path: "Services/Accounts/annual-compliance.html" },
-        { imageSrc: "assets/Accounts/Accounting and Book Keeping.png", altText: "Accounting and Book Keeping", title: "Accounting and Book Keeping", path: "Services/Accounts/accounting-and-bookkeeping.html" },
-        { imageSrc: "assets/Accounts/Audit.png", altText: "Audit", title: "Audit", path: "Services/Accounts/audit.html" },
+        { imageSrc: "assets/Accounts/income tax notice.png", altText: "Income Tax Notice", title: "Income Tax Notice", path: "Services/Accounts/income-tax-notice.html" },
+        { imageSrc: "assets/Accounts/annual compliance.png", altText: "Annual Compliance", title: "Annual Compliance", path: "Services/Accounts/annual-compliance.html" },
+        { imageSrc: "assets/Accounts/accounting and book keeping.png", altText: "Accounting and Book Keeping", title: "Accounting and Book Keeping", path: "Services/Accounts/accounting-and-bookkeeping.html" },
+        { imageSrc: "assets/Accounts/audit.png", altText: "Audit", title: "Audit", path: "Services/Accounts/audit.html" },
     ],
     "file-gst-section": [
         { imageSrc: "assets/File GST/indirect tax.png", altText: "Indirect Tax", title: "Indirect Tax", path: "Services/File GST/indirect-tax.html" },
