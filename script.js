@@ -31,7 +31,7 @@ const serviceSectionsData = {
     ],
     "trademark-section": [
         { imageSrc: "assets/Trademark/trademark.png", altText: "Trademark", title: "Trademark", path: "Services/Trademark/trademark-registration.html" },
-        { imageSrc: "assets/Trademark/copyright.png", altText: "Copyright", title: "Copyright", path: "Services/Trademark/copyright-registration.html" },
+        { imageSrc: "assets/Trademark/Copyright.png", altText: "Copyright", title: "Copyright", path: "Services/Trademark/copyright-registration.html" },
         { imageSrc: "assets/Trademark/intellectual-property.png", altText: "Intellectual Property", title: "Intellectual Property", path: "Services/Trademark/intellectual-property.html" },
         { imageSrc: "assets/Trademark/patent-registration.png", altText: "Patent Registration", title: "Patent Registration", path: "Services/Trademark/patent-registration.html" },
         { imageSrc: "assets/Trademark/trademark-objection.png", altText: "Trademark Objection", title: "Trademark Objection", path: "Services/Trademark/trademark-objection.html" },
