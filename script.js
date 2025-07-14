@@ -30,12 +30,12 @@ const serviceSectionsData = {
         { imageSrc: "assets/License/pollution-consent.png", altText: "Pollution Consent", title: "Pollution Consent", path: "Services/License/pollution-consent.html" },
     ],
     "trademark-section": [
-        { imageSrc: "assets/Trademark/Trademark.png", altText: "Trademark", title: "Trademark", path: "Services/Trademark/trademark-registration.html" },
-        { imageSrc: "assets/Trademark/Copyright.png", altText: "Copyright", title: "Copyright", path: "Services/Trademark/copyright-registration.html" },
+        { imageSrc: "assets/Trademark/trademark.png", altText: "Trademark", title: "Trademark", path: "Services/Trademark/trademark-registration.html" },
+        { imageSrc: "assets/Trademark/copyright.png", altText: "Copyright", title: "Copyright", path: "Services/Trademark/copyright-registration.html" },
         { imageSrc: "assets/Trademark/intellectual-property.png", altText: "Intellectual Property", title: "Intellectual Property", path: "Services/Trademark/intellectual-property.html" },
-        { imageSrc: "assets/Trademark/Patent-Registration.png", altText: "Patent Registration", title: "Patent Registration", path: "Services/Trademark/patent-registration.html" },
-        { imageSrc: "assets/Trademark/Trademark-Objection.png", altText: "Trademark Objection", title: "Trademark Objection", path: "Services/Trademark/trademark-objection.html" },
-        { imageSrc: "assets/Trademark/Trademark-Infringement.png", altText: "Trademark Infringement", title: "Trademark Infringement", path: "Services/Trademark/trademark-infringement.html" },
+        { imageSrc: "assets/Trademark/patent-registration.png", altText: "Patent Registration", title: "Patent Registration", path: "Services/Trademark/patent-registration.html" },
+        { imageSrc: "assets/Trademark/trademark-objection.png", altText: "Trademark Objection", title: "Trademark Objection", path: "Services/Trademark/trademark-objection.html" },
+        { imageSrc: "assets/Trademark/trademark-infringement.png", altText: "Trademark Infringement", title: "Trademark Infringement", path: "Services/Trademark/trademark-infringement.html" },
     ],
     "accounts-section": [
         { imageSrc: "assets/Accounts/tds-return-filing.png", altText: "TDS Return Filing", title: "TDS Return Filing", path: "Services/Accounts/tds-return-filing.html" },
